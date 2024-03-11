@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>My Personal Portfolio</title>
+  <!-- linking external css file  -->
+  <link rel="stylesheet" href="index.css" />
+  <!-- linking fontawesome style sheet for icons  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Linking Swiper CSS file for automatic slider functionality in testimonial slider  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+  <!-- linking Owl carousal css for making carousal in testimonial slider  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.1/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.1/assets/owl.theme.default.css">
+
+  <!-- linking animate css for switching to other slide with animation as above  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+</head>
+<div>
+  <!-- Navbar HTML CODE -->
+  <header>
+    <nav class="navbar">
+      <!-- hamburder menu image  -->
+      <span class="navbar-toggle" id="js-navbar-toggle">
+        <i class="fas fa-bars"></i>
+      </span>
+      <!-- logo of the website  -->
+      <a href="#home" class="logo"
+        style="width:72px;height:72px;display:inline;background:transparent;border-radius:40px;"><img src="assets/D.png"
+          style="width:72px;height:72px;display:inline;background:transparent;border-radius:40px;"></a>
+      <!-- navbar components in list form -->
+      <ul class="main-nav" id="js-menu">
+        <li>
+          <a href="#home" class="nav-links">HOME</a>
+        </li>
+        <li>
+          <a href="#features" class="nav-links">FEATURES</a>
+        </li>
+        <li>
+          <a href="#portfolio" class="nav-links">PORTFOLIO</a>
+        </li>
+        <li>
+          <a href="#resume" class="nav-links">RESUME</a>
+        </li>
+        <li>
+          <a href="#testimonial" class="nav-links">TESTIMONIAL</a>
+        </li>
+        <li>
+          <a href="#blog" class="nav-links">BLOG</a>
+        </li>
+        <li>
+          <a href="#contact" class="nav-links">CONTACT</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <!-- Home HTML Code -->
+  <div class="home" id="home">
+    <!-- type 1 main container of home  -->
+    <div class="container">
+      <div class="info">
+        <p>WELCOME TO MY WORLD</p>
+        <!-- greeting lines for animation  -->
+        <h1>Hi, I’m <span style="color: #ff014f;">Danish </span></h1>
+        <h1 class="content" id="typing" style="display: inline-block;">a</h1>
+        <p>"In my design approach, I harness animation to transcend traditional interfaces, fostering intuitive user
+          journeys that transcend mere visuals. Each motion serves a purpose, enriching interactions with depth and
+          clarity, elevating the user experience beyond mere aesthetics."</p>
+      </div>
+      <!-- profile image  -->
+      <div class="image" style="margin-right: 20px;">
+        <img src="assets/profile.jpg">
+      </div>
+    </div>
+    <!-- social media links and skills icons  -->
+    <div class="findAndSkill">
+      <div class="findMe" style="align-self:flex-start;">
+        <div class="head" style="margin:25px; color: #b4bfcc;">FIND ME HERE</div>
+        <ul>
+          <!-- using fontawesome icons  -->
+          <li><i class="fa-brands fa-facebook-f" style="color: #ffffff;"></i></li>
+          <li><i class="fa-brands fa-twitter" style="color: #ffffff;"></i></li>
+          <li><i class="fa-brands fa-linkedin-in" style="color: #fcfcfd;"></i></li>
+        </ul>
+      </div>
+      <div class="skillsIcons" style="align-self:flex-start;">
+        <div class="head" style="margin:25px; color: #b4bfcc;">HAVING SKILLS IN</div>
+        <ul>
+          <li><i class="fa-brands fa-invision" style="color: #cf1ccf;"></i></li>
+          <li><i class="fa-brands fa-sketch" style="color: #d97808;"></i></li>
+          <li><i class="fa-brands fa-figma" style="color: #0e3bd1;"></i></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- Features html code -->
+  <!-- type 2 main container of features  -->
+  <div class="container3 animate" id="features">
+    <div class="containerHead2">FEATURES</div>
+    <div class="containerMainHead2">What I Do</div>
+    <!-- cards container with image  and content  -->
+    <div class="container-01">
+      <!-- first card  -->
+      <div class="neumorphic-card">
+        <div class="imgBox">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="contentBox">
+          <h3>Business Stratagy</h3>
+          <p>I collapse into the embrace of the tall grass beside the murmuring stream, feeling its cool touch against
+            my skin. </p>
+        </div>
+      </div>
+      <!-- second card and so on  -->
+      <div class="neumorphic-card">
+        <div class="imgBox">
+          <i class="fa-brands fa-apple"></i>
+        </div>
+        <div class="contentBox">
+          <h3>App Development</h3>
+          <p>From the inception of your project to its launch, we'll take care of every aspect of the app development
+            process.
+          </p>
+        </div>
+      </div>
+      <div class="neumorphic-card">
+        <div class="imgBox">
+          <i class="fa-solid fa-tv"></i>
+        </div>
+        <div class="contentBox">
+          <h3>Business Stratagy</h3>
+          <p>I sink into the lush grass beside the babbling stream, embracing the earth as I meld into its comforting
+            embrace.</p>
+        </div>
+      </div>
+      <div class="neumorphic-card">
+        <div class="imgBox">
+          <i class="fa-solid fa-mobile-screen"></i>
+        </div>
+        <div class="contentBox">
+          <h3>Mobile App</h3>
+          <p>Leveraging our proficiency in mobile application development to craft stunning, pixel-perfect designs.</p>
+        </div>
+      </div>
+      <div class="neumorphic-card">
+        <div class="imgBox">
+          <i class="fa-solid fa-database"></i>
+        </div>
+        <div class="contentBox">
+          <h3> SEO Optimisation
+          </h3>
+          <p>We ensure not only to propel you to the top of search engine rankings but also to maintain your position
+            consistently.
+          </p>
+        </div>
+      </div>
+      <div class="neumorphic-card">
+        <div class="imgBox">
+          <i class="fa-solid fa-tv"></i>
+        </div>
+        <div class="contentBox">
+          <h3>UX Consulting</h3>
+          <p>A UX consultant takes on similar responsibilities to a UX designer, yet their focus often extends beyond
+            design.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Portfolio html Code  -->
+  <!-- portfolio main container  -->
+  <div class="container3" id="portfolio">
+    <div class="containerHead3">VISIT MY PORTFOLIO AND KEEP YOUR FEEDBACK</div>
+    <div class="containerMainHead3">My Portfolio</div>
+    <!-- cards container with card image and content as above  -->
+    <div class="container-02">
+      <div class="neumorphic-card">
+        <div class="imgBox">
+          <img src="assets/portfolio-large-01-340x250.jpg">
+        </div>
+        <div class="contentBox">
+          <h3>GALLERY</h3>
+          <p>NFT Dashboard Application Development
+          </p>
+        </div>
+      </div>
+      <div class="neumorphic-card">
+        <div class="imgBox">
+          <img src="assets/portfolio-large-02-340x250.jpg">
+        </div>
+        <div class="contentBox">
+          <h3>VIDEO</h3>
+          <p>Online Food Delievery Mobile App Design
+          </p>
+        </div>
+      </div>
+      <div class="neumorphic-card">
+        <div class="imgBox">
+          <img src="assets/portfolio-large-03-340x250.jpg">
+        </div>
+        <div class="contentBox">
+          <h3>EXTERNAL LINK</h3>
+          <p>Travel App Design Creativity And Application
+          </p>
+        </div>
+      </div>
+      <div class="neumorphic-card">
+        <div class="imgBox">
+          <img src="assets/portfolio-large-04-340x250.jpg">
+        </div>
+        <div class="contentBox">
+          <h3>IMAGE</h3>
+          <p>Workout Website Design And Development
+          </p>
+        </div>
+      </div>
+      <div class="neumorphic-card">
+        <div class="imgBox">
+          <img src="assets/portfolio-large-05-340x250.jpg">
+        </div>
+        <div class="contentBox">
+          <h3>GALLERY</h3>
+          <p>Mobile Application Landing Page Design
+          </p>
+        </div>
+      </div>
+      <div class="neumorphic-card">
+        <div class="imgBox">
+          <img src="assets/portfolio-large-06-340x250.jpg">
+        </div>
+        <div class="contentBox">
+          <h3>STANDARD</h3>
+          <p>Restaurant Mobile Application Figma Design
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Resume html Code  -->
+  <!-- resume main container  -->
+  <div class="container3" id="resume">
+    <div class="containerHead3">7+ YEARS OF EXPERIENCE</div>
+    <div class="containerMainHead3">My Resume</div>
+    <div class="resumeContent">
+      <!-- container for cards and content  -->
+      <div class="container-03">
+        <div class="Date">1998-2010</div>
+        <div class="resumeCategory">Education Quality</div>
+        <div class="neumorphic-card">
+          <div class="contentBox">
+            <p>BSc in Computer Science
+            </p>
+            <span>University of DVI (2006-2010)</span>
+            <div class="gpLoc">3.90/4</div>
+            <hr width="500px;" color="#203026" size="1" style="margin:15px 0px;">
+            <h3>The training provided by universities in order to prepare people to work in various sectors of the
+              economy or areas of culture.</h3>
+          </div>
+        </div>
+        <div class="neumorphic-card">
+          <div class="contentBox">
+            <p>AS - Science & Information
+            </p>
+            <span>SuperKing College (2001 - 2005)</span>
+            <div class="gpLoc">4.75/5</div>
+            <hr width="500px;" color="#203026" size="1" style="margin:15px 0px;">
+            <h3>Higher education is tertiary education leading to award of an academic degree. Higher education, also
+              called post-secondary education.</h3>
+          </div>
+        </div>
+        <div class="neumorphic-card">
+          <div class="contentBox">
+            <p>Secondary School Education
+            </p>
+            <span>Kingstar Secondary School (1998 - 2000)</span>
+            <div class="gpLoc">5.00/5</div>
+            <hr width="500px;" color="#203026" size="1" style="margin:15px 0px;">
+            <h3>Secondary education or post-primary education covers two phases on the International Standard
+              Classification of Education scale.</h3>
+          </div>
+        </div>
+      </div>
+      <div class="container-03">
+        <div class="Date">2010-2022</div>
+        <div class="resumeCategory">Job Experience</div>
+        <div class="neumorphic-card">
+          <div class="contentBox">
+            <p>Sr. Software Engineer
+            </p>
+            <span>Google Out Tech - (2017 - Present)</span>
+            <div class="gpLoc">AUSTRALIA</div>
+            <hr width="500px;" color="#203026" size="1" style="margin:15px 0px;">
+            <h3>USA
+              Google’s hiring process is an important part of our culture. Googlers care deeply about their teams and
+              the people who make them up.</h3>
+          </div>
+        </div>
+        <div class="neumorphic-card">
+          <div class="contentBox">
+            <p>Web Developer & Trainer
+            </p>
+            <span>Apple Developer Team - (2012 - 2016)</span>
+            <div class="gpLoc">USA</div>
+            <hr width="500px;" color="#203026" size="1" style="margin:15px 0px;">
+            <h3>A popular destination with a growing number of highly qualified homegrown graduates, it's true that
+              securing a role in Malaysia isn't easy.</h3>
+          </div>
+        </div>
+        <div class="neumorphic-card">
+          <div class="contentBox">
+            <p>Front-end Developer
+            </p>
+            <span>Nike - (2020 - 2011)</span>
+            <div class="gpLoc">MALAYSIA</div>
+            <hr width="500px;" color="#203026" size="1" style="margin:15px 0px;">
+            <h3>The India economy has grown strongly over recent years, having transformed itself from a producer and
+              innovation-based economy.</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Testimonial html Code  -->
+  <div class="container3" id="testimonial">
+    <div class="containerHead3">WHAT CLIENTS SAY</div>
+    <div class="containerMainHead3" style="margin-bottom: 0px !important;">Testimonial</div>
+    <section class="testimonial-section">
+      <!-- container for testimonial slider -->
+      <div class="large-container">
+        <!-- titles blocks to maintain distance of slider from top  -->
+        <div class="sec-title">
+          <span class="title">&nbsp;</span>
+          <h2>&nbsp;</h2>
+        </div>
+        <!-- carousal of testimonial -->
+        <div class="testimonial-carousel owl-carousel owl-theme">
+          <!-- Testimonial Block -->
+          <div class="testimonial-block">
+            <div class="inner-box">
+              <div class="text">Why is this important? Because clients want to know the businesses they depend on for
+                advice, are well managed in their own right. Not only that but this event gives you the chance to give
+                your back-office team</div>
+              <div class="info-box">
+                <div class="thumb"><img src="assets/final-home-1st.png" alt=""></div>
+                <h4 class="name">Sameer Khan</h4>
+                <span class="designation">Ui Designer & CEO</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial Block -->
+          <div class="testimonial-block">
+            <div class="inner-box">
+              <div class="text">Understanding the significance of this is crucial because it underscores the clients'
+                desire for reassurance that the firms they entrust for counsel are themselves efficiently managed.
+                Moreover, this occasion grants you the opportunity to recognize and empower your back-office team.</div>
+              <div class="info-box">
+                <div class="thumb"><img src="assets/final-home-2nd-1.png" alt=""></div>
+                <h4 class="name">Mahfuz Riad</h4>
+                <span class="designation">Ui Designer & CEO</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial Block -->
+          <div class="testimonial-block">
+            <div class="inner-box">
+              <div class="text">This holds significance as it addresses clients' expectations for well-run businesses
+                providing them with advice. Additionally, it offers you a platform to acknowledge and elevate your
+                back-office team, showcasing their importance within the organization.</div>
+              <div class="info-box">
+                <div class="thumb"><img src="assets/final-home-3rd.png" alt=""></div>
+                <h4 class="name">Saim Haris</h4>
+                <span class="designation">Ui Designer & CEO</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+</section>
+</div>
+<!-- Blog Html code  -->
+<div class="container3" id="blog">
+  <div class="containerHead3">VISIT MY BLOG AND KEEP YOUR FEEDBACK</div>
+  <div class="containerMainHead3">My Blog</div>
+  <!-- main container for blog with card and content -->
+  <div class="container-02">
+    <div class="neumorphic-card">
+      <div class="imgBox">
+        <img src="assets/blog1.jpg">
+      </div>
+      <div class="contentBox">
+        <h3>DEVELOPMENT</h3>
+        <p style="line-height: 30px;">The Best Ways to Do Market Research For Your Business Plan.
+        </p>
+      </div>
+    </div>
+    <div class="neumorphic-card">
+      <div class="imgBox">
+        <img src="assets/blog2.jpg">
+      </div>
+      <div class="contentBox">
+        <h3>QUOTE</h3>
+        <p style="line-height: 30px;">The Easiest Way to Become a Successful Writer and Author.
+        </p>
+      </div>
+    </div>
+    <div class="neumorphic-card">
+      <div class="imgBox">
+        <img src="assets/blog3.jpg">
+      </div>
+      <div class="contentBox">
+        <h3>TECHNICIAN</h3>
+        <p style="line-height: 30px;">The Quickest Way to Deliever Your Message? Make it Visual.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Contact html Code  -->
+<div class="container3" id="contact">
+  <div class="containerHead3">CONTACT</div>
+  <div class="containerMainHead3">Contact With Me</div>
+  <!-- main contact container -->
+  <div class="formContainer">
+    <form action="#">
+      <div>
+        <!-- logo  -->
+        <img src="assets/contactImage.png" alt="icon">
+      </div>
+      <!-- enteries for form  -->
+      <input type="text" placeholder="Name (required)" required name="name">
+      <input type="text" placeholder="Email (required)" required name="email">
+      <input type="text" placeholder="Topic (required)" required name="topic">
+      <textarea placeholder="Subject (required)" required name="message"></textarea>
+      <input type="submit" value="Send" id="submitButton">
+    </form>
+  </div>
+</div>
+
+<!-- Footer HTML Code  -->
+<footer class="footer">
+  <div class="row" style="padding: 40px 0px;">
+    <!-- columns of footer  -->
+    <div class="footer-col">
+      <h4>company</h4>
+      <ul>
+        <li><a href="#">about us</a></li>
+        <li><a href="#">our services</a></li>
+        <li><a href="#">privacy policy</a></li>
+        <li><a href="#">affiliate program</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>get help</h4>
+      <ul>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">shipping</a></li>
+        <li><a href="#">returns</a></li>
+        <li><a href="#">order status</a></li>
+        <li><a href="#">payment options</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>online shop</h4>
+      <ul>
+        <li><a href="#">watch</a></li>
+        <li><a href="#">bag</a></li>
+        <li><a href="#">shoes</a></li>
+        <li><a href="#">dress</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>follow us</h4>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+  <!-- copyright portion  -->
+  <div class="copyright" style="color:#747a84; text-align:center;">&copy;2023. All rights reserved by Rainbow-Themes
+  </div>
+  </div>
+</footer>
+</div>
+
+<!-- jquery cdn  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<!-- owl carousal js cdn  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.1/owl.carousel.min.js"></script>
+<!-- swiper cdn  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+<script src="index.js"></script>
+</body>
+
+</html>

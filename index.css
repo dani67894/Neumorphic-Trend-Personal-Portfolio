@@ -1,0 +1,971 @@
+/* Style sheet for html  */
+/* importing required fonts from google fonts  */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;1,300&display=swap");
+
+/* Necessary Color Variables and box shadow values for neumorphic design */
+:root {
+  /* box shadow  */
+  --boxshadow: -5px -5px 5px rgba(255, 255, 255, 0.1),
+    10px 10px 10px rgba(0, 0, 0, 0.4),
+    inset -5px -5px 5px rgba(255, 255, 255, 0.2),
+    inset 10px 10px 10px rgba(0, 0, 0, 0.4);
+  --basicfontfamily: "Montserrat", sans-serif;
+  /* colors */
+  --simplewhitecolor: #ffffff;
+  --subtextcolor: #b4bfcc;
+  --redcolor: #ff014f;
+  --backgroundcolor2: linear-gradient(145deg, #1e2024, #23272b);
+}
+
+/* Mostly going to be used CSS elements styles  */
+/* type 2 container head style  */
+.animate {
+  animation: slideInFromBottom 2s ease forwards;
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.containerHead2 {
+  color: var(--redcolor);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.containerMainHead2 {
+  font-size: 60px;
+  font-weight: 700;
+  color: var(--subtextcolor);
+  margin-bottom: 50px;
+}
+
+/* type 3 container styles  */
+.container3 {
+  box-shadow: var(--boxshadow);
+  padding: 80px 15px;
+}
+
+.containerHead3 {
+  color: var(--redcolor);
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.containerMainHead3 {
+  font-size: 60px;
+  font-weight: 700;
+  color: var(--subtextcolor);
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+/* CSS Reset  */
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #212428;
+  box-sizing: border-box;
+  font-family: var(--basicfontfamily);
+}
+
+/* Navbar Style Code */
+header {
+  font-family: var(--basicfontfamily);
+}
+
+.navbar {
+  font-size: 13px;
+  padding-bottom: 10px;
+  font-weight: 400;
+  /* adjusting styles for fixed navbar  */
+  position: fixed;
+  top: 0;
+  z-index: 500;
+  width: 100%;
+  /* using box shadow  */
+  box-shadow: var(--boxshadow);
+  text-align: center;
+  justify-content: center;
+}
+
+.main-nav {
+  list-style-type: none;
+  display: none;
+}
+
+.nav-links,
+.logo {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.main-nav li {
+  text-align: center;
+  margin: 15px auto;
+}
+
+/* logo style  */
+.logo {
+  display: inline-block;
+  font-size: 22px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+/* position for hamburger menu  */
+.navbar-toggle {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 24px;
+}
+
+/* class to show hamburger for screens  */
+.active {
+  display: block;
+}
+
+/* making the navbar responsive for different screens  */
+/* displaying all components of navbar for large screens and default is hamburger  */
+@media screen and (min-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0;
+    height: 70px;
+    align-items: center;
+  }
+
+  .main-nav {
+    display: flex;
+    margin-right: 30px;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .main-nav li {
+    margin: 0;
+  }
+
+  .nav-links {
+    margin-left: 40px;
+  }
+
+  .logo {
+    margin-top: 0;
+  }
+
+  .navbar-toggle {
+    display: none;
+  }
+
+  .nav-links:hover {
+    color: #ff014f;
+  }
+}
+
+/* Home Style Code  */
+.home {
+  box-shadow: var(--boxshadow);
+  padding-bottom: 100px;
+}
+
+/* setting container for home and second container as both have same scenes  */
+.container,
+.findAndSkill {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* single container for home style  */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 140px;
+  min-height: calc(100vh - 80px);
+  margin-top: 15vh;
+}
+
+.image {
+  box-shadow: var(--boxshadow);
+}
+
+/* setting responsive styles for home  */
+@media (max-width: 767px) {
+
+  .container,
+  .findAndSkill {
+    gap: 0;
+    min-height: calc(100vh - 101px);
+    justify-content: center;
+    flex-direction: column-reverse;
+  }
+}
+
+@media (max-width: 767px) {
+  .info {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+}
+
+/* more home styles */
+.info h1 {
+  color: var(--simplewhitecolor);
+  font-size: 60px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.info p {
+  margin: 0;
+  line-height: 1.6;
+  font-size: 16px;
+  color: var(--subtextcolor);
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.findAndSkill {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* icons styles  */
+.findMe ul,
+.skillsIcons ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.findMe ul li,
+.skillsIcons ul li {
+  height: 60px;
+  width: 60px;
+  margin: 10px;
+  font-size: 30px;
+  background-color: var(--backgroundcolor2);
+  box-shadow: var(--boxshadow);
+  display: flex;
+  /* Center horizontally */
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
+  /* Center vertically */
+}
+
+/* Features Style Code  */
+/* container for cards  */
+.container-01 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/* cards style */
+.container-01 .neumorphic-card {
+  width: 400px;
+  height: 375px;
+  margin: 10px 5px;
+  padding: 50px 50px;
+  border-radius: 10px;
+  box-shadow: var(--boxshadow);
+}
+
+.container-01 .neumorphic-card .imgBox {
+  position: relative;
+}
+
+.container-01 .neumorphic-card .imgBox i {
+  font-size: max(50px);
+  color: var(--redcolor);
+}
+
+.container-01 .neumorphic-card .contentBox {
+  position: relative;
+  margin-top: 30px;
+}
+
+.container-01 .neumorphic-card .contentBox h3 {
+  color: #c4cfde;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 1.4em;
+}
+
+.container-01 .neumorphic-card:hover .imgBox,
+.container-01 .neumorphic-card:hover .contentBox {
+  transform: scale(0.98);
+}
+
+.container-01 p {
+  z-index: 12;
+  margin: 20px auto 10px;
+  position: relative;
+  color: #c4cfde;
+  line-height: 30px;
+}
+
+.container-01 p span {
+  font-weight: 700;
+}
+
+/* Portfolio Style Code  */
+.container-02 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/* portfolio card style  */
+.container-02 .neumorphic-card {
+  width: 390px;
+  height: 430px;
+  margin: 10px;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: var(--boxshadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-02 .neumorphic-card .imgBox {
+  position: relative;
+}
+
+.container-02 .neumorphic-card .imgBox img {
+  border-radius: 10px;
+}
+
+.container-02 .neumorphic-card .contentBox {
+  position: relative;
+  margin-top: 30px;
+}
+
+.container-02 .neumorphic-card .contentBox h3 {
+  color: var(--redcolor);
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-size: 12px;
+}
+
+.container-02 .neumorphic-card:hover .imgBox,
+.container-02 .neumorphic-card:hover .contentBox {
+  transform: scale(0.98);
+}
+
+.container-02 p {
+  z-index: 12;
+  margin: 20px auto 10px;
+  position: relative;
+  color: #c4cfde;
+  font-weight: 600;
+  font-size: 23px;
+}
+
+.container-02 p span {
+  font-weight: 700;
+}
+
+/* Resume Style Code  */
+
+.resumeContent {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.Date {
+  color: var(--redcolor);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 5px;
+  margin-top: 30px;
+}
+
+.resumeCategory {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--subtextcolor);
+  padding-bottom: 25px;
+}
+
+.container-03 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+/* resume card style */
+.container-03 .neumorphic-card {
+  width: 564px;
+  height: 300px;
+  margin: 10px 10px;
+  padding: 5px 35px;
+  border-radius: 5px;
+  box-shadow: var(--boxshadow);
+  display: flex;
+  flex-direction: column;
+}
+
+.container-03 .neumorphic-card .contentBox {
+  position: relative;
+  margin-top: 30px;
+}
+
+.gpLoc {
+  color: var(--redcolor);
+  width: 90px;
+  height: 35px;
+  font-size: 14px;
+  font-family: "Poppins", cursive;
+  position: relative;
+  left: 430px;
+  bottom: 12px;
+  box-shadow: var(--boxshadow);
+  text-align: center;
+  border-radius: 5px;
+  padding-top: 7px;
+}
+
+.container-03 .neumorphic-card .contentBox h3 {
+  color: #747a84;
+  font-weight: 400;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  margin-top: 20px;
+}
+
+.container-03 .neumorphic-card:hover .contentBox {
+  transform: scale(0.98);
+}
+
+.container-03 p {
+  z-index: 12;
+  position: relative;
+  color: #c4cfde;
+  font-weight: 500;
+  font-size: 24px;
+  font-family: "Poppins", sans-serif;
+}
+
+.container-03 span {
+  font-weight: 400;
+  font-size: 14px;
+  color: #747a84;
+  font-family: "Poppins", sans-serif;
+}
+
+/* maintaining responsiveness for different screens  */
+@media (max-width: 375px) {
+  .container-03 .neumorphic-card {
+    width: 370px;
+    height: 360px;
+  }
+
+  .gpLoc {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .container-03 .neumorphic-card {
+    width: 400px;
+    height: 300px;
+  }
+
+  .gpLoc {
+    position: static;
+  }
+}
+
+@media (max-width: 992px) {
+  .container-03 .neumorphic-card {
+    width: 450px;
+    height: 300px;
+  }
+
+  .gpLoc {
+    position: static;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container-03 .neumorphic-card {
+    width: 564px;
+    height: 300px;
+  }
+}
+
+/* Testimonial Style code  */
+
+/* Slider container  */
+.large-container {
+  position: static;
+  max-width: 1580px;
+  padding: 0px 30px;
+  margin: 0 auto;
+}
+
+/* testimonial or carousal section  */
+.testimonial-section {
+  position: relative;
+  padding-top: 0px 80px;
+  padding-bottom: 210px;
+  overflow: hidden;
+}
+
+/* circle animation  */
+.testimonial-section:before {
+  position: absolute;
+  left: -100px;
+  top: 5%;
+  background-image: url(http://t.commonsupport.com/adro/images/icons/ring-circle.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 701px;
+  height: 756px;
+  content: "";
+  /* style for different browsers  */
+  -webkit-animation: fa-spin 25s infinite alternate;
+  -moz-animation: fa-spin 25s infinite alternate;
+  -ms-animation: fa-spin 25s infinite alternate;
+  -o-animation: fa-spin 25s infinite alternate;
+  animation: fa-spin 25s infinite alternate;
+}
+
+.testimonial-section .sec-title {
+  position: relative;
+  margin-bottom: 115px;
+}
+
+.testimonial-section .sec-title .title {
+  margin-bottom: 20px;
+}
+
+/* carousal position  */
+.testimonial-section .testimonial-carousel {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 -50px;
+}
+
+/* blocks positions  */
+.testimonial-block {
+  position: relative;
+  margin: 20px 50px 0px 50px;
+}
+
+.testimonial-block .inner-box {
+  padding: 80px 105px;
+  background-color: var(--backgroundcolor2);
+  box-shadow: var(--boxshadow);
+}
+
+.testimonial-block .text {
+  position: relative;
+  display: block;
+  font-size: 18px;
+  line-height: 32px;
+  color: var(--simplewhitecolor);
+  font-weight: 400;
+  margin-bottom: 50px;
+  font-family: "Muli", sans-serif;
+}
+
+.testimonial-block .info-box {
+  position: relative;
+  padding-left: 115px;
+  padding-top: 10px;
+}
+
+/* indicators position  */
+.testimonial-block .info-box .thumb {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 82px;
+  width: 82px;
+}
+
+.testimonial-block .info-box .thumb img {
+  border-radius: 50%;
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  box-shadow: 0 45px 45px rgba(147, 147, 147, 0.35);
+}
+
+/* name and designation styles and others  */
+.testimonial-block .info-box .name {
+  position: relative;
+  display: block;
+  font-size: 21px;
+  line-height: 1.2em;
+  color: var(--simplewhitecolor);
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-family: "Niramit", sans-serif;
+}
+
+.testimonial-block .info-box .designation {
+  position: relative;
+  display: block;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--simplewhitecolor);
+  font-weight: 400;
+  font-family: "Muli", sans-serif;
+}
+
+/* next and previous testimonial blocks indicators  */
+.testimonial-carousel .owl-nav {
+  position: absolute;
+  right: 75px;
+  bottom: 70px;
+}
+
+.testimonial-carousel .owl-next,
+.testimonial-carousel .owl-prev {
+  position: relative;
+  display: inline-block;
+  height: 75px;
+  width: 75px;
+  line-height: 75px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: var(--backgroundcolor2);
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+/* arrow styles  */
+.arrow-right,
+.arrow-left {
+  position: relative;
+  display: inline-block;
+  height: 9px;
+  width: 43px;
+  background-image: url(http://t.commonsupport.com/adro/images/icons/arrow-left-2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.arrow-right {
+  background-image: url(http://t.commonsupport.com/adro/images/icons/arrow-right-2.png);
+}
+
+.testimonial-section .thumb-layer {
+  position: absolute;
+  right: 30px;
+  top: 120px;
+}
+
+.testimonial-section .thumb-layer .image {
+  position: relative;
+  margin-right: 0;
+}
+
+.testimonial-section .thumb-layer .image img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* responsiveness  */
+@media only screen and (max-width: 500px) {
+  .testimonial-section:before {
+    display: none;
+  }
+
+  .testimonial-block .inner-box {
+    box-shadow: none;
+    border: none;
+    padding: 20px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .testimonial-section:before {
+    display: none;
+  }
+
+  .testimonial-block .inner-box {
+    box-shadow: none;
+    border: none;
+    padding: 20px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .testimonial-section:before {
+    display: none;
+  }
+
+  .testimonial-section .sec-title {
+    margin-bottom: 50px;
+  }
+
+  .testimonial-block {
+    padding: 0;
+  }
+
+  .testimonial-block .inner-box {
+    box-shadow: none;
+  }
+
+  .testimonial-carousel .owl-nav {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .testimonial-carousel .owl-next,
+  .testimonial-carousel .owl-prev {
+    border: 2px solid #f1f1f1;
+  }
+}
+
+@media only screen and (max-width: 1366px) {
+  .large-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* Blog html Code  */
+
+.container-02 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 40px 0px;
+}
+
+/* card for blog style  */
+/* card style is same as portfolio card  */
+/* setting image style in blog card  */
+.container-02 .neumorphic-card .imgBox img {
+  border-radius: 10px;
+}
+
+/* Contact style Code  */
+.formContainer {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* form styles  */
+form {
+  margin-top: 100px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 60px;
+  border-radius: 20px;
+  position: relative;
+  z-index: 1;
+  box-shadow: var(--boxshadow);
+}
+
+form>div {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  padding: 0 20px;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: var(--boxshadow);
+}
+
+/* form title image  */
+form>div>img {
+  width: 100px;
+  filter: invert(0);
+}
+
+/* inputs and area style  */
+form>input,
+form>textarea {
+  font-family: cursive;
+  padding: 12px;
+  margin: 12px auto;
+  color: #f1f1f1;
+  background-color: var(--backgroundcolor2);
+  border-radius: 1rem;
+  display: block;
+  width: 70vw;
+  box-shadow: var(--boxshadow);
+}
+
+form>textarea {
+  height: 100px;
+  resize: none;
+  background-color: #191b1e;
+  border: 3px solid #747a84;
+  ;
+}
+
+input[type=text] {
+  border: 3px solid #747a84;
+  ;
+  transition: 0.5s;
+  background-color: #191b1e
+}
+
+/* on click style for inputs  */
+input[type=text]:focus {
+  border: 3px solid var(--redcolor);
+}
+
+form>input[type="submit"] {
+  max-width: 20vw;
+  padding-left: 1%;
+  padding-right: 1%;
+  cursor: pointer;
+  transition: 0.35s;
+  font-size: 25px;
+  border-radius: 1rem;
+}
+
+form>input[type="submit"]:hover {
+  background-color: #191b1e;
+  color: white;
+}
+
+/* Footer Style Code  */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+ul {
+  list-style: none;
+}
+
+.footer {
+  background-color: var(--backgroundcolor2);
+}
+
+/* column width of footer  */
+.footer-col {
+  width: 25%;
+  padding: 0 15px;
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  color: var(--simplewhitecolor);
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+
+/* underline styles  */
+.footer-col h4::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+
+/* margin for all li other than last one  */
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: var(--simplewhitecolor);
+  padding-left: 8px;
+}
+
+/* social links styles  */
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  /* background-color: rgba(255, 255, 255, 0.2); */
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: var(--simplewhitecolor);
+  transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+  cursor: pointer;
+}
+
+.copyright {
+  box-shadow: var(--boxshadow);
+}
+
+/*responsive*/
+@media(max-width: 767px) {
+  .footer-col {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+
+@media(max-width: 574px) {
+  .footer-col {
+    width: 100%;
+  }
+}
